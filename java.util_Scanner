@@ -27,7 +27,7 @@ public class Program
         while(valueString.hasNext()){
             System.out.println(valueString.next());
         }
-        // ↑ Present meaning like code below
+        // ↑ while {} , Presents the same meaning like the code below
         //System.out.println(valueString.next());
         //System.out.println(valueString.next());
         //System.out.println(valueString.next());
