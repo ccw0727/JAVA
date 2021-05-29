@@ -1,0 +1,15 @@
+import java.io.*;
+
+public class Main
+{
+    public static void main(String[] args) throws IOException{
+		BufferedReader keyin = new BufferedReader(new InputStreamReader(System.in));
+        
+        System.out.printf("請輸入第一個整數: ");
+        int num1 = Integer.parseInt(keyin.readLine());
+        System.out.printf("請輸入第二個整數: ");
+        int num2 = Integer.parseInt(keyin.readLine());
+        int sum = num1+num2;
+        System.out.printf("%d + %d = %d", num1,num2, sum);
+	}
+}
