@@ -1,0 +1,14 @@
+import java.io.*;
+
+public class Main
+{
+    public static void main(String[] args) throws IOException{
+		BufferedReader keyin = new BufferedReader(new InputStreamReader(System.in));
+        
+        System.out.printf("請輸入名字: ");
+        String name = keyin.readLine();
+        System.out.printf("請輸入金錢: ");
+        int price = Integer.parseInt(keyin.readLine());
+        System.out.printf("%s 付了 %d 元", name, price);
+	}
+}
