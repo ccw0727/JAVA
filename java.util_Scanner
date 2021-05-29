@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Program
+{
+    public static void main(String[] args) {
+		
+        Scanner valueInt = new Scanner(System.in);
+        int inputV;
+        inputV = valueInt.nextInt();
+        
+        //Expample 1 of Scanner
+        
+        System.out.printf("請輸入一個整數:  %d \t \n", inputV);     
+        System.out.printf("十進位為: %d \n", inputV);
+        System.out.printf("八進位為: %o \n", inputV);
+        System.out.printf("十六進位為: %x \n", inputV);
+        System.out.printf("轉換為浮點數格式 %.2f \n", (float)inputV);
+
+        
+        System.out.println("\n");
+        
+        
+        //Expample 2 of Scanner 
+        String inputS = "1 fish/5 fish/red cat/blue elephant";
+        Scanner valueString = new Scanner(inputS).useDelimiter("/");  //split words with "/", alse can split words with "\\s*"
+        
+        while(valueString.hasNext()){
+            System.out.println(valueString.next());
+        }
+        // ↑ Present meaning like code below
+        //System.out.println(valueString.next());
+        //System.out.println(valueString.next());
+        //System.out.println(valueString.next());
+        //System.out.println(valueString.next());
+
+	}
+}
