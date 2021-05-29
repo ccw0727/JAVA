@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main{
+    public static void main (String[] args) {
+        Scanner keyin = new Scanner(System.in);
+        System.out.print("請輸入客戶資料: ");
+        
+        String name = keyin.next();
+        int year = keyin.nextInt();
+        float price = keyin.nextFloat();
+        
+        System.out.print("\n客戶資料如下: \n");
+        System.out.printf("客戶姓名: %s \n", name);
+        System.out.printf("客戶年齡: %d \n", year);
+        System.out.printf("消費金額: %.2f ", price);
+    }
+    
+}
