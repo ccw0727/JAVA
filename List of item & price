@@ -1,0 +1,20 @@
+public class Program
+{
+    public static void main(String[] args) {
+		    String drink = "抹茶拿鐵";
+        String cookie = "樂事";
+        int num1 = 3;
+        int num2 = 5;
+        int price = 50;
+        int price2 = 30;
+        int T1 = num1*price;
+        int T2 = num2*price2;
+
+        System.out.println("品名 \t 數量 \t 單價 \t 小計");
+        System.out.println("=============================");  
+        System.out.printf("%s\t%d \t %d \t %d \n", drink, num1, price, T1 );
+        System.out.printf("%s\t %d \t %d \t %d \n", cookie, num2, price2, T2);
+        System.out.println("=============================");
+        System.out.printf("總計: %d", T1+T2);
+	}
+}
