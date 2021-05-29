@@ -1,0 +1,15 @@
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args) throws IOException {
+        BufferedReader keyin = new BufferedReader(new InputStreamReader(System.in));
+        final double oilPrice, ml, total;
+        oilPrice = 28.50;
+        System.out.printf("目前汽油每公升 %.2f 元\n", oilPrice);
+        System.out.print("請輸入加油公升數: ");
+        ml = Double.parseDouble(keyin.readLine());
+        total = oilPrice * ml;
+        System.out.printf("應付金額為: %.0f 元", total);
+    }
+    
+}
