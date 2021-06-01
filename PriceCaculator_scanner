@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class PriceCaculator{
+    public static void main(String[] args) {
+        Scanner keyin = new Scanner(System.in);
+        int sum = 0, item;  
+        
+        System.out.printf("目前總金額 = %d\n", sum);
+       
+        System.out.printf("請輸入麵包的金額 =>");
+        item = keyin.nextInt();
+        sum = sum +item;
+        System.out.printf("目前總金額 = %d\n", sum);
+
+        System.out.printf("請輸入水果的金額 => ");
+        item = keyin.nextInt();
+        sum = sum + item;
+        System.out.printf("目前總金額 = %d\n", sum);
+
+        System.out.printf("請輸入餅乾的金額 => ");
+        item = keyin.nextInt();
+        sum = sum + item;
+        System.out.printf("總金額為 = %d , 謝謝光臨！", sum);
+
+        keyin.close();
+    }
+
+}
