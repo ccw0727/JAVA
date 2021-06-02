@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class StockAvg{
+    public static void main(String[] args) {
+        Scanner keyin = new Scanner(System.in);
+        float sum=0, cost, avg;
+        int count=0;
+        System.out.println("*****計算股票平均價系統*****");
+
+        System.out.print("請輸入第一個交易日股價 => ");
+        cost = keyin.nextFloat();
+        sum += cost;
+        count += 1;
+        avg = sum/count;
+
+        System.out.printf("(目前平均股價 = %.2f) 請輸入第二個交易日股價 => ", avg);
+        cost = keyin.nextFloat();
+        sum += cost;
+        count += 1;
+        avg = sum/count;
+
+        System.out.printf("(目前平均股價 = %.2f) 請輸入第三個交易日股價 => ", avg);
+        cost = keyin.nextFloat();
+        sum += cost;
+        count += 1;
+        avg = sum/count;
+
+        System.out.printf("(目前平均股價 = %.2f) 請輸入第四個交易日股價 => ", avg);
+        cost = keyin.nextFloat();
+        sum += cost;
+        count += 1;
+        avg = sum/count;
+
+        System.out.printf("(目前平均股價 = %.2f) 請輸入第五個交易日股價 => ", avg);
+        cost = keyin.nextFloat();
+        sum += cost;
+        count += 1;
+        avg = sum/count;
+
+        System.out.printf("五日平均股價 = %.2f ", avg);
+
+        keyin.close();
+    }
+    
+}
