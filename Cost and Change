@@ -1,0 +1,52 @@
+import java.util.*;
+
+public class CostChange{
+    public static void main(String[] args) {
+        Scanner keyin = new Scanner(System.in);
+        int item, cost=0, paid, refund, hund, fifty, ten, five, one;
+        
+        System.out.println("*****超商收銀機系統*****");
+        System.out.print("衛生紙(每包32元)購買數量 => ");
+        item = keyin.nextInt();
+        cost += item*32;
+        System.out.print("優酪乳(每罐12元)購買數量 => ");
+        item = keyin.nextInt();
+        cost += item*12;
+        System.out.print("綠茶(每罐18元)購買數量 => ");
+        item = keyin.nextInt();
+        cost += item*18;
+        System.out.print("奶茶(每罐17元)購買數量 => ");
+        item = keyin.nextInt();
+        cost += item*17;
+
+        System.out.printf("應收金額 = %d\n", cost);
+  
+
+        System.out.print("請輸入繳納的金額 => ");
+        paid = keyin.nextInt();
+
+        refund = paid - cost;
+        System.out.printf("應找金額 = %d ,零錢數量如下：\n", refund);
+        
+        hund = refund / 100;
+        refund = refund % 100;  
+        System.out.printf("100元零錢 = %d 張\n", hund);
+        
+        fifty = refund / 50;
+        refund = refund % 50;
+        System.out.printf("50元零錢 = %d 個\n", fifty);
+        
+        ten = refund / 10;
+        refund = refund % 10;
+        System.out.printf("10元零錢 = %d 個\n", ten);
+
+        five = refund / 5;
+        refund = refund % 5;
+        System.out.printf("5元零錢 = %d 個 \n", five);
+
+        one = refund / 1;
+        refund = refund % 1;
+        System.out.printf("1元零錢 = %d 個\n", one);
+
+    }
+}
