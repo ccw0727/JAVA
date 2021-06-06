@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class SemesterScore{
+    public static void main(String[] args) {
+        Scanner keyin = new Scanner(System.in);
+        float avg;
+        int score, sum_score=0; 
+        int com_credit=2, code_credit=3, math_credit=3, chi_credit=2, eng_credit=2, sum_credit=0;
+        
+        System.out.printf("請輸入電腦概論成績(%d 學分) => ", com_credit);
+        score = keyin.nextInt();
+        sum_score += score*com_credit;
+        sum_credit += com_credit;
+        
+        
+        System.out.printf("請輸入程式設計成績(%d 學分) => ", code_credit);
+        score = keyin.nextInt();
+        sum_score += score*code_credit;
+        sum_credit += code_credit;
+        
+        System.out.printf("請輸入離散數學成績(%d 學分) => ", math_credit);
+        score = keyin.nextInt();
+        sum_score += score*math_credit;
+        sum_credit += math_credit;
+
+        System.out.printf("請輸入國文成績(%d 學分) => ", chi_credit);
+        score = keyin.nextInt();
+        sum_score += score*chi_credit;
+        sum_credit += chi_credit;
+
+        System.out.printf("請輸入英文成績(%d 學分) => ", eng_credit);
+        score = keyin.nextInt();
+        sum_score += score*eng_credit;
+        sum_credit += eng_credit;
+
+        avg = (float)sum_score/sum_credit;
+        System.out.printf("學期總分 = %d \n", sum_score);
+        System.out.printf("學期總學分 = %d \n", sum_credit);
+        System.out.printf("學期總平均分數 = %.2f \n", avg);
+        System.out.printf("四捨五入後分數 = %d ", (int)avg);
+        
+    }
+
+}
