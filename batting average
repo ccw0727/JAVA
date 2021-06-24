@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[ ] args) {
+        Scanner keyin = new Scanner(System.in);
+        int TotalTime=50 ,HitTime=15;
+        float HitPer = (float)HitTime/TotalTime;
+        
+        System.out.printf("目前出場數=%d, 安打=%d, 打擊率是=%.4f \n", TotalTime, HitTime, HitPer);
+        int GamesPlayed, Hit;
+        
+        for (int i=1; i<=3; i++) {
+        System.out.printf("請輸入第 %d 場(打擊次數 安打次數)\n", i);
+        GamesPlayed = keyin.nextInt();
+        Hit = keyin.nextInt();
+        TotalTime = TotalTime + GamesPlayed;
+        HitTime = HitTime + Hit;
+        HitPer = (float)HitTime/TotalTime;
+        System.out.printf("目前出場數=%d, 安打=%d, 打擊率是=%.4f \n", TotalTime, HitTime, HitPer);
+        
+        }
+    }
+}
