@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[ ] args) {
+        Scanner keyin = new Scanner(System.in);
+        System.out.println("insert two integer：");
+        int a,b;
+        a = keyin.nextInt();
+        b = keyin.nextInt();
+
+        System.out.printf("未轉換：%d \n", a/b);
+        System.out.printf("已轉換int：%d \n", (int)a/b);
+        System.out.printf("已轉換float：%f \n", (float)a/b);
+    }
+}
