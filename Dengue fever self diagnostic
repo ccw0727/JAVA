@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("*****登革熱自我診斷系統*****");
+		System.out.println("請依照程式詢問步驟, 輸入各種症狀明顯度為何（0~10）");
+		
+	    Scanner keyin = new Scanner(System.in);
+	    int Heat, Sour, Cough, Sleepy;
+	    int a=8, b=6, c=4, d=3;
+	    int weights = a+b+c+d;
+	    float index;
+	    
+	    System.out.print("請輸入發燒症狀明顯否（0~10）=> ");	
+	    Heat = keyin.nextInt();
+	    
+	    System.out.print("請輸入筋骨痠痛明顯否（0~10）=> ");
+	    Sour = keyin.nextInt();
+	    
+   	    System.out.print("請輸入感冒症狀明顯否（0~10）=> ");
+        Cough = keyin.nextInt();
+	    
+	    System.out.print("請輸入貪睡症狀明顯否（0~10）=> ");
+	    Sleepy = keyin.nextInt();
+	    
+	    index = (float) (Heat*a + Sour*b + Cough*c + Sleepy*d) / weights ; //乘上各個症狀的比重
+	    // 注意：因int互相運算結果也是int, 故需強制轉換成floa格式
+	    
+	    System.out.printf("您登革熱指數為（0~10）: %.2f", index);
+	    
+	}
+}
