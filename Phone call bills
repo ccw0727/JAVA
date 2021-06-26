@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("*****手機通話費計算工具*****");
+	    Scanner keyin = new Scanner(System.in);
+	    int H, M, S, TotalTime;
+	    float S_Price, TotalPrice;
+	    
+	    System.out.print("請輸入通話時間（H/M/S） => ");
+	    H = keyin.nextInt();
+	    M = keyin.nextInt();
+	    S = keyin.nextInt();
+	    TotalTime = H*60*60 + M*60 + S;
+	    System.out.printf("通話時間總共 %d 秒 \n", TotalTime);
+	    
+	    System.out.print("請輸入每秒計費 (e.g. 0.5/s) => ");
+	    S_Price = keyin.nextFloat();
+	    TotalPrice = TotalTime * S_Price ;  
+	    System.out.printf("通話費總共 %d 元", (int)TotalPrice);
+	}
+}
