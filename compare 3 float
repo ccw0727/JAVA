@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	    Scanner keyin = new Scanner(System.in);
+	    float f1, f2, f3;
+	    System.out.println("請輸入三個浮點數:");
+	    f1 = keyin.nextFloat();
+	    f2 = keyin.nextFloat();
+	    f3 = keyin.nextFloat();
+	    
+	    float min, max;
+	    min = Math.min(f1, Math.min(f2, f3));
+	    max = Math.max(f1, Math.max(f2, f3));
+	    System.out.printf("最大值：%.2f \n" ,max);
+	    System.out.printf("最小值：%.2f \n" ,min);
+	}
+}
