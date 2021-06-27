@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+		System.out.println("*****薪資調整及加班費計算系統*****");
+		Scanner keyin = new Scanner(System.in);
+		System.out.print("請輸入員工姓名 => ");
+		String name = keyin.nextLine();
+		System.out.print("請輸入底薪 => ");
+		int salaryBasic = keyin.nextInt();
+		System.out.print("請輸入加班時數 => ");
+		int hour = keyin.nextInt();
+		
+		if(salaryBasic >= 16800){
+		    System.out.println("〔輸入薪資符合勞委會規定〕");
+
+		    if(hour > 45){
+		        hour = 45;
+		    }
+		    double overtime_perHour = (double) (salaryBasic / (30*8)) * (1 + 0.333);
+		    int overtime_pay = (int) ((float)overtime_perHour * hour);
+		    int salaryTotol = salaryBasic + overtime_pay;
+		    System.out.println("列印員工薪資如下：\n");
+		    System.out.printf("員工姓名：%s\n", name);
+		    System.out.printf("底薪：%d\n", salaryBasic);
+		    System.out.printf("加班費：%d\n", overtime_pay);
+		    System.out.printf("本月薪資：%d\n", salaryTotol);
+		    
+		}else {
+		    System.out.println("〔輸入薪資不符合勞委會規定〕");
+		    salaryBasic = 16800;
+		    if(hour > 45){
+		        hour = 45;
+		    }
+		    double overtime_perHour = (double) (salaryBasic / (30*8)) * (1 + 0.333);
+		    int overtime_pay = (int) ((float)overtime_perHour * hour);
+		    int salaryTotol = salaryBasic + overtime_pay;
+		    System.out.println("列印員工薪資如下：");
+		    System.out.printf("員工姓名：%s\n", name);
+		    System.out.printf("底薪：%d\n", salaryBasic);
+		    System.out.printf("加班費：%d\n", overtime_pay);
+		    System.out.printf("本月薪資：%d\n", salaryTotol);
+		}
+	}
+}
