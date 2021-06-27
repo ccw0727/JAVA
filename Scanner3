@@ -4,17 +4,17 @@ public class Main{
     public static void main (String[] args) {
         Scanner keyin = new Scanner(System.in);
         System.out.print("請輸入職位名稱: ");
-        String position = keyin.nextLine();
+        String position = keyin.nextLine();  //nextLine() => for String
         System.out.print("請輸入姓名: ");
-        String name = keyin.nextLine();
+        String name = keyin.nextLine();   
         System.out.print("請輸入電話: ");
         String phone = keyin.nextLine();
 
         System.out.println("-------------------");
         System.out.println("ABC股份科技公司");
         System.out.print("名片列印如下: \n");
-        System.out.printf("%s \n", position);
-        System.out.printf("\t %s \n", name);
+        System.out.printf("%s \n", position);  //%s => for String
+        System.out.printf("\t %s \n", name);  
         System.out.printf("電話: %s \n", phone);
         
         System.out.println("-------------------");
