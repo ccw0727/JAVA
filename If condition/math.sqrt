@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args) {
+		System.out.println("*****平方根計算工具*****");
+		Scanner keyin = new Scanner(System.in);
+		System.out.print("請輸入一個浮點數 => ");
+		float f1 = keyin.nextFloat();
+		if(f1 > 0){
+		    float f2 = (float)Math.sqrt(f1);
+		    System.out.printf("%.2f 的平方根 = %.2f \n", f1, f2);
+		}else{
+		    System.out.println("您輸入的數小於0, 請重新輸入大於0的浮點數 => ");
+		    float f1_2 = keyin.nextFloat();
+		    float f3 = (float)Math.sqrt(f1_2);
+		    System.out.printf("%.2f 的平方根 = %.2f \n", f1_2, f3);
+		}
+		System.out.print("程式結束");
+	}
+}
