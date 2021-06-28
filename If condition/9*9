@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Random rnd = new Random();
+		//rnd.setSeed(1);
+		int x, y, right_ans;
+		x = 1 + rnd.nextInt(9);
+		y = 1 + rnd.nextInt(9);
+		right_ans = x*y;
+		
+		Scanner keyin = new Scanner(System.in);
+		System.out.println("輸入正確答案的結果如下：");
+		System.out.printf("%d * %d = ", x, y);
+		int ans_1 = keyin.nextInt();
+		
+		if(ans_1 == right_ans){
+		    System.out.println("答對了！好棒！\n");
+		}else{
+		    System.out.println("答錯了！加油！\n");
+		    
+		}
+		
+		System.out.println("輸入錯誤答案的結果如下：");
+		System.out.printf("%d * %d = ", x, y);
+		int ans_2 = keyin.nextInt();
+		
+		if(ans_2 != right_ans){
+		    System.out.println("答錯了！加油！");
+		}else{
+		    System.out.println("答對了！好棒！");
+		}
+		
+	}
+}
