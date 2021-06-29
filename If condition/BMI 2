@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.println("===歡迎使用 BMI 評估系統(18~24)===");
+		double height=0 , weight=0, get_fat=0, kill_fat=0;
+		
+		Scanner keyin = new Scanner(System.in);
+		System.out.print("請輸入客戶身高(公分)：");
+		height = keyin.nextDouble();
+		System.out.print("請輸入客戶體重(公斤)：");
+		weight = keyin.nextDouble();
+		
+		double BMI = (double) weight / Math.pow((height / 100), 2);
+		
+		System.out.printf("客戶 BMI = %.4f \n\n", BMI);
+		
+		if(BMI > 24){
+		    kill_fat = (double) weight - 24 * Math.pow((height / 100), 2);
+		    System.out.printf("太胖了！去運動～需要減 %.2f 公斤", kill_fat);
+		    
+		}else if(18 <= BMI && BMI <= 24){   
+		    System.out.print("標準身材R～");
+		
+		}else{
+		    get_fat = (double) 18 * Math.pow((height / 100), 2) - weight;
+		    System.out.printf("太瘦了！需要再增胖 %.2f 公斤", get_fat);
+            
+		}
+	}
+}
