@@ -1,0 +1,86 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.println("歡迎使用結核病診斷系統");
+	    System.out.println("===========================\n");
+		String cough, sputum, tired, thinner;
+		String tightness, hurtness, breath;
+		String fever, sweat, blood;
+		int infection=0, active=0, danger=0;
+		Scanner keyin = new Scanner(System.in);
+		
+		System.out.println("===感染期症狀詢問===");
+		
+		System.out.print("您是否咳嗽？ => ");
+		cough = keyin.nextLine();
+		if(cough.equals("y")){
+            infection += 1;
+		}
+		System.out.print("您是否咳痰？ => ");
+		sputum = keyin.nextLine();
+		if(sputum.equals("y")){
+            infection += 1;
+		}
+		System.out.print("您是否疲倦？ => ");
+		tired = keyin.nextLine();
+		if(tired.equals("y")){
+            infection += 1;
+		}
+		System.out.print("您是否體重減輕？ => ");
+		thinner = keyin.nextLine();
+		if(thinner.equals("y")){
+            infection += 1;
+		}
+		if(infection >=3 ){
+		    System.out.println("\n===進入感染期, 繼續症狀詢問===");
+		    System.out.print("您是否胸悶？ => ");
+		    tightness = keyin.nextLine();
+	    	if(tightness.equals("y")){
+                active += 1;
+		    }
+		    System.out.print("您是否胸痛？ => ");
+		    hurtness = keyin.nextLine();
+	    	if(hurtness.equals("y")){
+                active += 1;
+		    }
+		    System.out.print("您是否呼吸困難？ => ");
+		    breath = keyin.nextLine();
+	    	if(breath.equals("y")){
+                active += 1;
+		    }
+		    
+		    if(active >=2 ){
+		        System.out.println("\n===進入發病期, 繼續詢問症狀===");
+		        System.out.print("您是否有午後發燒？ => ");
+		        fever = keyin.nextLine();
+	        	if(fever.equals("y")){
+                    danger += 1;
+		        }
+		        System.out.print("您是否有夜間盜汗？ => ");
+		        sweat = keyin.nextLine();
+	        	if(sweat.equals("y")){
+                    danger += 1;
+		        }
+		        System.out.print("您是否有咳血？ => ");
+		        blood = keyin.nextLine();
+	        	if(blood.equals("y")){
+                    danger += 1;
+		        }
+		        
+		        if(danger >=2 ){
+		            System.out.println("\n診斷結果：進入危險期, 需隔離就醫！");
+		        }else{
+		            System.out.println("\n診斷結果：已發病, 請盡快就醫！");
+		        }
+		        
+		    }else{
+		        System.out.println("\n診斷結果：僅受感染, 請盡快就醫！");
+		    }
+		    
+		}else{
+		    System.out.println("\n診斷結果：GOOD！您未受感染！");
+		}
+	}
+}
