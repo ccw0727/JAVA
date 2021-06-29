@@ -1,0 +1,55 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.println("===歡迎使用醫療診斷系統, 請依序回答問題===");
+		String fever, cough, tired, hypertension, thirsty, sweat;
+		
+		Scanner keyin = new Scanner(System.in);
+		System.out.print("您是否發燒？ => ");
+		fever = keyin.nextLine();
+		if(fever.equals("y")){
+		    System.out.print("您是否咳嗽？ => ");
+	    	cough = keyin.nextLine();
+	    	if(cough.equals("y")){
+	    	    System.out.print("您是否疲倦？ => ");
+	        	tired = keyin.nextLine();
+	        	if(tired.equals("y")){
+	    	        System.out.print("診斷結果：您感冒了～～～");
+	    	        
+	    	    }else{
+	    	        System.out.print("診斷結果：建議您至小兒科門診檢查");
+	    	    } 
+	    	        
+	    	}else{
+	    	    System.out.print("您是否高血壓？ => ");
+	        	hypertension = keyin.nextLine();
+	        	if(hypertension.equals("y")){
+	    	        System.out.print("您是否口乾？ => ");
+	        	    thirsty = keyin.nextLine();
+	        	    if(thirsty.equals("y")){
+	    	            System.out.print("診斷結果：您疑似肝病");
+	    	        }else{
+	    	            System.out.print("診斷結果：建議您至抽血門診檢查");
+	    	        }
+	    	    }else{
+	    	        System.out.print("您是否盜汗？ => ");
+	        	    sweat = keyin.nextLine();
+	        	    if(sweat.equals("y")){
+	        	        System.out.print("診斷結果：您疑似肺病");
+	        	    }else{
+	           	        System.out.print("診斷結果：建議您至耳鼻喉科門診檢查");
+	        	    }
+	    	    }
+	    	        
+	    	}
+	        	
+		}else{	
+		    System.out.print("診斷結果：您沒事, 健康～");
+
+		    
+		}
+		
+	}
+}
