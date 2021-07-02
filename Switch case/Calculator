@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner keyin = new Scanner(System.in);
+		
+		System.out.print("＝＝歡迎使用＋-＊/計算器＝＝\n");
+		System.out.print("請輸入運算式（e.g. 45 + 20）=> ");
+		int a=0, b=0;
+		char operator;
+		a = keyin.nextInt();
+		operator = keyin.next().charAt(0);
+		b = keyin.nextInt();
+		
+		switch(operator){
+		case '+':           //注意：不可用雙引號
+		    System.out.printf("%d %s %d = %d", a, operator, b, a+b);
+		    break;
+		case '-': 
+            System.out.printf("%d %s %d = %d", a, operator, b, a-b);
+            break;
+        case '*': 
+            System.out.printf("%d %s %d = %d", a, operator, b, a*b);
+            break;
+        case '/': 
+            System.out.printf("%d %s %d = %d", a, operator, b, a/b);
+            break;
+		}
+		
+	}
+}
