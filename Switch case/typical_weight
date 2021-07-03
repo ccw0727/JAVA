@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Float height = 0.0f, weight = 0.0f, typical_weight=0.0f, shape = 0.0f;
+	    
+	    Float B = 0.7f;
+	    Scanner keyin = new Scanner(System.in);
+		System.out.println("==依性別計算標準體重==");
+		System.out.print("請輸入性別 => ");
+		String sex = keyin.nextLine();
+		System.out.print("請輸入身高(cm) => ");
+		height = keyin.nextFloat();
+		System.out.print("請輸入體重(kg) => ");
+		weight = keyin.nextFloat();
+		
+		switch(sex){
+		    case "男":
+		       Float m_typical_weight = (float) (height - 80.0) * 0.7f ;   //0.7要加f, 否則會是double型態
+		       typical_weight = m_typical_weight;
+		       break;                           //一定要加！不然會直接執行下一個case
+		       
+		    case "女":
+		       Float f_typical_weight = (float) (height - 70.0) * 0.6f ;
+		       typical_weight = f_typical_weight;
+		       break;
+		}
+		
+		if(typical_weight < weight){
+		    shape = (float) weight - typical_weight;
+		    System.out.printf("typical_weight = %.2f\n", typical_weight);
+		    System.out.printf("您過胖, 需要減少 %.2f 公斤", shape);
+	    }else if (typical_weight > weight){
+		      shape = typical_weight - weight;
+		      System.out.printf("typical_weight = %.2f\n", typical_weight);
+		      System.out.printf("您過瘦, 需要增加 %.2f 公斤", shape);
+		 }else{
+		      System.out.printf("您是標準身材！");
+		  }
+		
+	}
+}
