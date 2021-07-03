@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    final int basic = 100, per_unit = 5;
+	    Scanner keyin = new Scanner(System.in);
+		System.out.println("==瓦斯費計算系統==");
+		System.out.print("請輸入使用度數 => ");
+		int unit = keyin.nextInt();
+		int charge=0;
+		if(unit <= 20){
+		    charge = basic;
+		}else if (unit > 20){
+		    charge = per_unit * unit;
+		}
+		System.out.printf("應繳費用為：%d ", charge);
+	}
+}
